@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "https://openai-img-generation-clone.onrender.com/";
+const ENDPOINT = "https://openai-img-generation-clone.onrender.com";
 // "https://talk-a-tive.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
@@ -60,6 +60,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
       socket.emit("join chat", selectedChat._id);
     } catch (error) {
+      console.log(error)
       toast({
         title: "Error Occured!",
         description: "Failed to Load the Messages",
@@ -93,6 +94,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         socket.emit("new message", data);
         setMessages([...messages, data]);
       } catch (error) {
+        console.log(error)
         toast({
           title: "Error Occured!",
           description: "Failed to send the Message",
