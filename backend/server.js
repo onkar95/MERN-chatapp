@@ -19,9 +19,9 @@ const corsOptions = {
   optionSuccessStatus: 200,
 }
 app.use(cors(corsOptions))
-// app.get("/", (req, res) => {
-//   res.send("API Running!");
-// });
+app.get("/", (req, res) => {
+  res.send("API Running!");
+});
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
