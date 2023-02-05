@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json()); // to accept json data
 const corsOptions = {
-  origin: 'https://openai-img-generation-clone.onrender.com',
+  origin: 'https://main--glittery-horse-e41e99.netlify.app',
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 }
@@ -60,7 +60,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://openai-img-generation-clone.onrender.com",
+    origin: "https://main--glittery-horse-e41e99.netlify.app",
     // credentials: true,
   },
 });
