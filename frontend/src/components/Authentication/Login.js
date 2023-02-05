@@ -40,7 +40,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/login",
+        "https://openai-img-generation-clone.onrender.com/api/user/login",
         { email, password },
         config
       );

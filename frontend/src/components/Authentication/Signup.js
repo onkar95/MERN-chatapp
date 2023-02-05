@@ -51,7 +51,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:4000/api/user",
+        "https://openai-img-generation-clone.onrender.com/api/user",
         {
           name,
           email,
